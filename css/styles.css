@@ -26,7 +26,10 @@
 }
 
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+/* âncoras (#atendimento, #contato) não somem sob o header fixo */
+html { scroll-behavior: smooth; scroll-padding-top: 5.5rem; }
+:target { scroll-margin-top: 5.5rem; }
+::selection { background: var(--azul-700); color: var(--paper); }
 
 body {
   margin: 0;
@@ -44,6 +47,10 @@ body {
 
 a { color: inherit; }
 
+/* quebra tipográfica: títulos equilibrados, parágrafos sem linhas órfãs */
+h2, .contact__h, .areas__lead { text-wrap: balance; }
+p { text-wrap: pretty; }
+
 /* ============ Acessibilidade ============ */
 .skip-link {
   position: absolute; left: -999px; top: 0; z-index: 100;
@@ -57,6 +64,8 @@ a { color: inherit; }
   outline-offset: 3px;
   border-radius: 2px;
 }
+/* anel de foco legível sobre as faixas escuras (azul-700 não contrasta no escuro) */
+.approach :focus-visible, .contact :focus-visible { outline-color: var(--azul-100); }
 
 /* ============ Header ============ */
 .top {
@@ -74,7 +83,7 @@ a { color: inherit; }
 .brand__name span { color: var(--azul-500); font-style: italic; }
 .top__cta {
   font-size: var(--step--1); font-weight: 600; text-decoration: none;
-  color: var(--azul-700); padding: 0.55em 1.1em;
+  color: var(--azul-700); padding: 0.7em 1.2em;
   border: 1.5px solid var(--azul-500); border-radius: 999px;
   transition: background .25s, color .25s;
 }

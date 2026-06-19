@@ -5,7 +5,7 @@ Consolidação da fonte da verdade (PDF + assinatura de e-mail). Nada inventado.
 ## Identidade
 - **Nome:** Dra. Waleska Cid Silva
 - **Título:** Médica de Família e Comunidade
-- **CRM:** 6410 — `<!-- FALTANDO: UF do CRM (provável ES); confirmar com a cliente -->`
+- **CRM:** CRM-ES 6410 (UF confirmada pela cliente: ES)
 - **RQE:** `<!-- FALTANDO: número de RQE (especialista em MFC) -->`
 - **Marca:** "Médico em Casa" (logo MwC formado por traçado de batimento + estetoscópio)
 
@@ -47,7 +47,7 @@ para orientações do acompanhamento.
 de vida por meio de um acompanhamento individualizado e contínuo."
 
 ## Pendências para a cliente
-1. **UF do CRM** e **número de RQE** — obrigatórios na publicidade médica (CFM).
+1. ~~UF do CRM~~ **resolvida: ES** → exibido como `CRM-ES 6410`. Falta ainda o **número de RQE** (obrigatório na publicidade médica do CFM ao anunciar especialidade).
 2. **Foto** do herói / da Dra. — não há nenhuma na pasta. Página construída sem foto
    (tipográfica + linha-assinatura) para não inventar imagem.
 3. **Endereço e horários** do consultório.
