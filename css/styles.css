@@ -244,8 +244,9 @@ p { text-wrap: pretty; }
 .hero__thesis .line:nth-child(2) { transition-delay: .18s; }
 .hero__thesis .line:nth-child(3) { transition-delay: .31s; }
 
-/* abordagem (faixa escura): desliza da esquerda — não é fade-up */
-.js .approach .reveal { transform: translateX(-26px); }
+/* abordagem (faixa escura): desliza da esquerda — não é fade-up.
+   :not(.is-visible) p/ a variante não vencer o reset transform:none ao revelar */
+.js .approach .reveal:not(.is-visible) { transform: translateX(-26px); }
 .approach__body p.reveal:nth-child(2) { transition-delay: .12s; }
 
 /* áreas: a lista cascateia item a item */
@@ -253,7 +254,7 @@ p { text-wrap: pretty; }
 .js .areas__list li.reveal:nth-child(3n) { transition-delay: .13s; }
 
 /* compromisso: a âncora tipográfica cresce um toque ao entrar */
-.js .pledge__q.reveal { transform: scale(.965); transform-origin: left center; }
+.js .pledge__q.reveal:not(.is-visible) { transform: scale(.965); transform-origin: left center; }
 
 /* ============ Responsivo ============ */
 @media (min-width: 720px) {
