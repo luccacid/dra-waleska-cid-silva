@@ -1,0 +1,10 @@
+# raw client source materials — not for public hosting (kept local only)
+*.pdf
+ASS.-DE-EMAIL-*.png
+DRA. WALESKA CID SILVA.txt
+
+# test artifacts (rendered during the audit/test phase)
+.claude/evals/shot-*.png
+# OS
+Thumbs.db
+.DS_Store
