@@ -1,0 +1,6 @@
+{
+  "projectId": "2e6b81a9-bd84-46a3-9265-2aa0e6459625",
+  "shape": "identity-only",
+  "readmeHeader": ".design-sync/conventions.md",
+  "notes": "Repo sem biblioteca de componentes — sync manual só de identidade visual (tokens, fontes, CSS base). Fonte: css/styles.css."
+}

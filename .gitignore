@@ -5,6 +5,9 @@ DRA. WALESKA CID SILVA.txt
 
 # test artifacts (rendered during the audit/test phase)
 .claude/evals/shot-*.png
+# design-sync upload staging (regenerável a partir de css/styles.css)
+ds-bundle/
+
 # OS
 Thumbs.db
 .DS_Store
