@@ -1,3 +1,26 @@
+/* ============ Fontes (self-host, variáveis, subset latin) ============ */
+@font-face {
+  font-family: "Fraunces";
+  font-style: normal;
+  font-weight: 400 500;
+  font-display: swap;
+  src: url("../fonts/fraunces-var.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Fraunces";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/fraunces-italic-var.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Hanken Grotesk";
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url("../fonts/hanken-grotesk-var.woff2") format("woff2");
+}
+
 /* ============ Tokens (azul quente índigo + neutros quentes Mio Spa) ============ */
 :root {
   --ink:      #1A2230;
@@ -79,7 +102,7 @@ p { text-wrap: pretty; }
 }
 .brand { display: inline-flex; align-items: center; gap: 0.6rem; text-decoration: none; color: var(--azul-700); }
 .brand__mark { width: 44px; height: 28px; }
-.brand__name { font-family: var(--serif); font-weight: 500; font-size: 1.05rem; color: var(--ink); letter-spacing: 0.01em; }
+.brand__name { font-family: var(--serif); font-weight: 500; font-size: var(--step-0); color: var(--ink); letter-spacing: 0.01em; }
 .brand__name span { color: var(--azul-500); font-style: italic; }
 .top__cta {
   font-size: var(--step--1); font-weight: 600; text-decoration: none;
@@ -88,6 +111,7 @@ p { text-wrap: pretty; }
   transition: background .25s, color .25s;
 }
 .top__cta:hover { background: var(--azul-700); color: var(--paper); border-color: var(--azul-700); }
+.top__cta:active { transform: scale(.97); }
 
 /* ============ Buttons ============ */
 .btn {
@@ -101,6 +125,7 @@ p { text-wrap: pretty; }
 .btn--primary:hover { background: var(--azul-500); transform: translateY(-2px); box-shadow: 0 8px 20px -12px var(--azul-700); }
 .btn--ghost { color: var(--azul-700); border: 1.5px solid color-mix(in srgb, var(--azul-500) 75%, transparent); }
 .btn--ghost:hover { border-color: var(--azul-700); background: var(--azul-100); }
+.btn:active { transform: translateY(0) scale(.98); }
 
 /* ============ HERO ============ */
 .hero {
