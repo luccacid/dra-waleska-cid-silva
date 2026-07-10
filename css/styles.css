@@ -167,6 +167,39 @@ p { text-wrap: pretty; }
 .mode__t { position: relative; margin: 0 0 0 1.7rem; font-family: var(--serif); font-weight: 500; font-size: var(--step-2); line-height: 1.05; }
 .mode__t::before { content: ""; position: absolute; left: -1.7rem; top: 0.62em; width: 0.8rem; height: 2px; background: var(--brasa); }
 .mode__d { margin: 0.4rem 0 0 1.7rem; max-width: 50ch; color: color-mix(in srgb, var(--ink) 78%, var(--paper)); }
+.mode__link { display: inline-block; margin-top: 0.3rem; font-weight: 600; font-size: var(--step--1); color: var(--azul-700); text-underline-offset: 3px; }
+
+/* ============ TELECONSULTA (detalhe da modalidade; listas em <details>) ============ */
+.tele {
+  max-width: var(--maxw); margin: 0 auto;
+  padding: clamp(3rem, 6vw, 5.5rem) var(--gut);
+  display: grid; gap: clamp(2rem, 5vw, 4rem);
+  grid-template-columns: 1fr;
+}
+.tele__h { font-family: var(--serif); font-weight: 400; font-size: var(--step-3); margin: 0 0 0.6rem; letter-spacing: -0.01em; }
+.tele__h em { font-style: italic; color: var(--azul-500); }
+.tele__lead { margin: 0; color: color-mix(in srgb, var(--ink) 82%, var(--paper)); max-width: 52ch; }
+/* contrapeso honesto da seção: mesmo tom tipográfico do compromisso */
+.tele__note {
+  font-family: var(--serif); font-style: italic; color: var(--azul-500);
+  font-size: var(--step-1); line-height: 1.45; margin: 1.6rem 0 0; max-width: 38ch;
+}
+.tele__sub { font-size: var(--step--1); letter-spacing: 0.16em; text-transform: uppercase; color: var(--azul-700); font-weight: 600; margin: 0 0 0.4rem; }
+.tele__who { margin: 0 0 2.6rem; }
+.tele__group { border-top: 1px solid color-mix(in srgb, var(--ink) 14%, transparent); }
+.tele__group:last-of-type { border-bottom: 1px solid color-mix(in srgb, var(--ink) 14%, transparent); }
+.tele__group summary {
+  position: relative; list-style: none; cursor: pointer;
+  padding: 0.9rem 2rem 0.9rem 1.7rem;
+  font-family: var(--serif); font-weight: 500; font-size: var(--step-1); line-height: 1.2;
+}
+.tele__group summary::-webkit-details-marker { display: none; }
+/* traço-assinatura brasa, mesmo idioma do .mode__t */
+.tele__group summary::before { content: ""; position: absolute; left: 0; top: 1.5em; width: 0.8rem; height: 2px; background: var(--brasa); }
+.tele__group summary::after { content: "+"; position: absolute; right: 0.3rem; top: 50%; transform: translateY(-50%); font-family: var(--sans); font-weight: 500; color: var(--azul-500); }
+.tele__group[open] summary::after { content: "−"; }
+.tele__group .areas__list { margin: 0 0 1.4rem; }
+.tele__also { margin: 2rem 0 0; color: color-mix(in srgb, var(--ink) 78%, var(--paper)); max-width: 52ch; }
 
 /* ============ Divider ECG ============ */
 .divider { color: color-mix(in srgb, var(--azul-300) 80%, transparent); padding: 0 var(--gut); }
@@ -260,6 +293,9 @@ p { text-wrap: pretty; }
 @media (min-width: 720px) {
   .areas { grid-template-columns: 0.8fr 1.2fr; align-items: start; }
   .areas__list { columns: 2; column-gap: 3rem; }
+  .tele { grid-template-columns: 0.8fr 1.2fr; align-items: start; }
+  /* dentro dos <details> a lista fica em coluna única — grupos já são curtos */
+  .tele__group .areas__list, .tele__who { columns: 1; }
   .about__years { text-align: right; }
 }
 
