@@ -12,7 +12,7 @@ Site estático puro → deploy direto (GitHub Pages).
 - `index.html` — markup + JSON-LD `Physician` + metas/OG.
 - `css/styles.css` — tokens, layout por seção, motion, responsivo, reduced-motion.
 - `js/main.js` — reveals e desenho da "linha de cuidado" (ECG).
-- `favicon.svg`, `og-image.svg` — marca MwC em índigo.
+- `favicon.svg`, `og-image.svg` — marca **W-teto + assinatura "Waleska Cid"** (logos/LogoPropostas.pdf, direções 1a+1c): W com ápice-telhado, ponto dourado (brasa) = pessoa em casa; wordmark serif com "Cid" itálico.
 
 ## Rodar
 Abrir `index.html` no navegador (ou `python -m http.server`). Sem passo de build.

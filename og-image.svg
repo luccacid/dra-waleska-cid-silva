@@ -1,10 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
   <rect width="1200" height="630" fill="#F2ECE2"/>
-  <text x="90" y="150" font-family="Georgia, serif" font-size="30" letter-spacing="6" fill="#2A4068">MÉDICO EM CASA</text>
+  <g transform="translate(88,118) scale(1.35)" fill="none" stroke="#2A4068" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M0 0 L8 22 L15 3 L22 22 L30 0"/>
+  </g>
+  <circle cx="108.25" cy="139" r="3.2" fill="#C39A5B"/>
+  <text x="146" y="150" font-family="Georgia, serif" font-size="30" letter-spacing="6" fill="#2A4068">WALESKA CID · MEDICINA DE FAMÍLIA</text>
   <text x="86" y="300" font-family="Georgia, serif" font-size="86" fill="#1A2230">A saúde vai muito</text>
   <text x="86" y="392" font-family="Georgia, serif" font-size="86" fill="#1A2230">além do tratamento</text>
   <text x="86" y="484" font-family="Georgia, serif" font-size="86" fill="#1A2230">de <tspan font-style="italic" fill="#3C5A88">doenças.</tspan></text>
-  <text x="90" y="560" font-family="Georgia, serif" font-size="28" fill="#3C5A88">Dra. Waleska Cid Silva · CRM 6410 · Médica de Família e Comunidade</text>
+  <text x="90" y="560" font-family="Georgia, serif" font-size="28" fill="#3C5A88">Dra. Waleska Cid Silva · CRM-ES 6410 · Médica de Família e Comunidade</text>
   <path d="M0 600 H470 l18 0 10 -8 8 14 12 -56 16 104 12 -68 9 18 8 4 h10 l10 0 H1200"
         fill="none" stroke="#8AA2C4" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
