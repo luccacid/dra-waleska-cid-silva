@@ -1,0 +1,49 @@
+{
+  "$description": "Tokens extraídos de css/styles.css (fonte da verdade). Landing Dra. Waleska Cid Silva.",
+  "color": {
+    "ink":      { "value": "#1A2230", "role": "texto sobre claro; faixa escura final (contato)" },
+    "paper":    { "value": "#F2ECE2", "role": "superfície padrão; texto sobre escuro" },
+    "sand":     { "value": "#E6DAC8", "role": "faixa alternativa clara (sobre)" },
+    "azul-700": { "value": "#2A4068", "role": "primário: CTAs, títulos, faixa abordagem, fundo do favicon" },
+    "azul-500": { "value": "#3C5A88", "role": "ênfase itálica (em), hover primário" },
+    "azul-300": { "value": "#8AA2C4", "role": "apoio sobre escuro, divisor ECG" },
+    "azul-100": { "value": "#DFE7F1", "role": "hover ghost, foco sobre escuro" },
+    "brasa":    { "value": "#C39A5B", "role": "SÓ fios/pontos decorativos (traços, bullets, ponto do W-teto); nunca área ou texto" },
+    "$rules": "Proibido: teal/ciano, terracota, hex fora dos tokens. Derivações só via color-mix."
+  },
+  "font": {
+    "serif": { "value": "\"Fraunces\", Georgia, serif", "role": "display/títulos peso 400-500; itálico para ênfase e para o 'Cid' da marca", "files": ["fonts/fraunces-var.woff2", "fonts/fraunces-italic-var.woff2"] },
+    "sans":  { "value": "\"Hanken Grotesk\", system-ui, sans-serif", "role": "corpo e UI, pesos 400/500/600", "files": ["fonts/hanken-grotesk-var.woff2"] },
+    "$rules": "Nunca Inter/Roboto. Self-hosted, font-display: swap, subset latin."
+  },
+  "brand": {
+    "mark": "W-teto: W com ápice central em telhado + ponto brasa (a pessoa, em casa). Fontes: header inline SVG, favicon.svg (roundel índigo)",
+    "wordmark": "Waleska <em>Cid</em> em Fraunces (Cid itálico azul-500)",
+    "source": "logos/LogoPropostas.pdf — direções 1a (símbolo) + 1c (assinatura)",
+    "signature": "linha ECG ('linha de cuidado') no hero e divisores — não é o logo, é elemento de seção"
+  },
+  "typeScale": {
+    "step--1": "clamp(0.84rem, 0.8rem + 0.2vw, 0.95rem)",
+    "step-0":  "clamp(1.05rem, 1rem + 0.3vw, 1.2rem)",
+    "step-1":  "clamp(1.3rem, 1.15rem + 0.7vw, 1.6rem)",
+    "step-2":  "clamp(1.7rem, 1.4rem + 1.4vw, 2.4rem)",
+    "step-3":  "clamp(2.3rem, 1.7rem + 2.8vw, 3.8rem)",
+    "step-4":  "clamp(3rem, 1.9rem + 5.2vw, 6.5rem)",
+    "$rules": "Todo font-size usa um step. Eyebrows/rótulos: step--1 caps, tracking 0.12–0.16em."
+  },
+  "space": {
+    "gut":        "clamp(1.25rem, 5vw, 5rem)",
+    "section":    "clamp(3rem, 6vw, 5.5rem)",
+    "section-lg": "clamp(3.5rem, 8vw, 9rem)",
+    "$micro": "Micro-espaçamento ad-hoc por decisão (0.4–2.6rem); não quantizado — ver plans/01-refine-landing.md."
+  },
+  "radius": { "pill": "999px", "focus": "2px", "$rules": "Botões sempre pílula; sem cards, sem radius de card." },
+  "motion": {
+    "reveal":   { "value": "opacity .8s ease, transform .8s cubic-bezier(.2,.7,.2,1)", "trigger": "IntersectionObserver, one-shot" },
+    "ecg-draw": { "value": "stroke-dashoffset 1.6s cubic-bezier(.4,.05,.2,1)", "trigger": "entrada no viewport, one-shot" },
+    "button":   { "value": "transform .2s, background .25s, color .25s, box-shadow .25s; :active scale .97-.98" },
+    "$rules": "Zero animação em idle/infinite. prefers-reduced-motion desliga tudo."
+  },
+  "breakpoint": { "md": "720px" },
+  "maxWidth": "1180px"
+}
