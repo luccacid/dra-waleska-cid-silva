@@ -209,8 +209,10 @@ p { text-wrap: pretty; }
   font-family: var(--serif); font-style: italic; color: var(--azul-500);
   font-size: var(--step-1); line-height: 1.45; margin: 1.6rem 0 0; max-width: 38ch;
 }
-.tele__sub { font-size: var(--step--1); letter-spacing: 0.16em; text-transform: uppercase; color: var(--azul-700); font-weight: 600; margin: 0 0 1rem; }
-.tele__who { margin: 0 0 2.6rem; }
+.tele__sub { font-size: var(--step--1); letter-spacing: 0.16em; text-transform: uppercase; color: var(--azul-700); font-weight: 600; margin: 0 0 1.2rem; }
+.tele__who { margin: 0 0 4rem; }
+/* linhas com a mesma altura visual dos grupos abaixo */
+.tele__who li { padding-top: 1.1rem; padding-bottom: 1.1rem; }
 .tele__group { border-top: 1px solid color-mix(in srgb, var(--ink) 14%, transparent); }
 .tele__group:last-of-type { border-bottom: 1px solid color-mix(in srgb, var(--ink) 14%, transparent); }
 .tele__group summary {
