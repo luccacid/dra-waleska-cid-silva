@@ -209,7 +209,7 @@ p { text-wrap: pretty; }
   font-family: var(--serif); font-style: italic; color: var(--azul-500);
   font-size: var(--step-1); line-height: 1.45; margin: 1.6rem 0 0; max-width: 38ch;
 }
-.tele__sub { font-size: var(--step--1); letter-spacing: 0.16em; text-transform: uppercase; color: var(--azul-700); font-weight: 600; margin: 0 0 0.4rem; }
+.tele__sub { font-size: var(--step--1); letter-spacing: 0.16em; text-transform: uppercase; color: var(--azul-700); font-weight: 600; margin: 0 0 1rem; }
 .tele__who { margin: 0 0 2.6rem; }
 .tele__group { border-top: 1px solid color-mix(in srgb, var(--ink) 14%, transparent); }
 .tele__group:last-of-type { border-bottom: 1px solid color-mix(in srgb, var(--ink) 14%, transparent); }
@@ -219,8 +219,8 @@ p { text-wrap: pretty; }
   font-family: var(--serif); font-weight: 500; font-size: var(--step-1); line-height: 1.2;
 }
 .tele__group summary::-webkit-details-marker { display: none; }
-/* traço-assinatura brasa, mesmo idioma do .mode__t */
-.tele__group summary::before { content: ""; position: absolute; left: 0; top: 1.5em; width: 0.8rem; height: 2px; background: var(--brasa); }
+/* traço-assinatura brasa, mesmo idioma do .mode__t — centrado na linha do título */
+.tele__group summary::before { content: ""; position: absolute; left: 0; top: 50%; margin-top: -1px; width: 0.8rem; height: 2px; background: var(--brasa); }
 .tele__group summary::after { content: "+"; position: absolute; right: 0.3rem; top: 50%; transform: translateY(-50%); font-family: var(--sans); font-weight: 500; color: var(--azul-500); }
 .tele__group[open] summary::after { content: "−"; }
 .tele__group .areas__list { margin: 0 0 1.4rem; }
