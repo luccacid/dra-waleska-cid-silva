@@ -28,6 +28,7 @@
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png" />
   <link rel="preload" href="fonts/fraunces-var.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="fonts/fraunces-italic-var.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="fonts/hanken-grotesk-var.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="css/styles.css" />
 
@@ -56,7 +57,7 @@
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
   <header class="top">
-    <a class="brand" href="#" aria-label="Dra. Waleska Cid Silva — Medicina de Família e Comunidade">
+    <a class="brand" href="#conteudo" aria-label="Dra. Waleska Cid Silva — Medicina de Família e Comunidade">
       <!-- W-teto (1a): ápice central = telhado; ponto dourado = a pessoa, em casa -->
       <svg class="brand__mark" viewBox="0 0 44 28" aria-hidden="true" focusable="false">
         <path d="M6 4 L14 24 L22 7 L30 24 L38 4" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
@@ -64,7 +65,7 @@
       </svg>
       <span class="brand__name">Waleska <span>Cid</span></span>
     </a>
-    <a class="top__cta" href="https://wa.me/5527997910392" target="_blank" rel="noopener">Marcar consulta</a>
+    <a class="top__cta" href="https://wa.me/5527997910392?text=Ol%C3%A1%2C%20Dra.%20Waleska!%20Gostaria%20de%20marcar%20uma%20consulta." target="_blank" rel="noopener">Marcar consulta</a>
   </header>
 
   <main id="conteudo">
@@ -83,7 +84,7 @@
         em consultório, por teleconsulta e em visitas domiciliares na Grande Vitória.
       </p>
       <div class="hero__actions reveal">
-        <a class="btn btn--primary" href="https://wa.me/5527997910392" target="_blank" rel="noopener">
+        <a class="btn btn--primary" href="https://wa.me/5527997910392?text=Ol%C3%A1%2C%20Dra.%20Waleska!%20Vim%20pelo%20site%20e%20gostaria%20de%20marcar%20uma%20consulta." target="_blank" rel="noopener">
           Falar pelo WhatsApp
         </a>
         <a class="btn btn--ghost" href="#atendimento">Como eu atendo</a>
@@ -118,7 +119,7 @@
     <!-- MODALIDADES: faixa em linha, não grade de cards -->
     <section class="modes" id="atendimento" aria-labelledby="modos-h">
       <h2 class="section-label reveal" id="modos-h">Onde atendo você:</h2>
-      <ol class="modes__list">
+      <ul class="modes__list">
         <li class="mode reveal">
           <h3 class="mode__t">Consultório</h3>
           <p class="mode__d">Consulta presencial, com tempo e escuta para entender o quadro completo.</p>
@@ -132,7 +133,7 @@
           <h3 class="mode__t">Visita domiciliar</h3>
           <p class="mode__d">Atendimento na sua casa, em toda a Grande Vitória.</p>
         </li>
-      </ol>
+      </ul>
     </section>
 
     <!-- TELECONSULTA: detalhe da modalidade — listas longas em <details> nativos -->
@@ -153,7 +154,7 @@
       </div>
 
       <div class="tele__body">
-        <p class="tele__sub reveal">É uma boa opção para quem</p>
+        <h3 class="tele__sub reveal">É uma boa opção para quem</h3>
         <ul class="areas__list tele__who">
           <li class="reveal">Está viajando ou fora da sua cidade</li>
           <li class="reveal">Tem rotina corrida e pouco tempo para se deslocar</li>
@@ -162,7 +163,7 @@
           <li class="reveal">Busca acompanhamento sem deslocamento — de problemas súbitos a doenças de longa duração</li>
         </ul>
 
-        <p class="tele__sub reveal">Situações que costumam ser bem atendidas a distância</p>
+        <h3 class="tele__sub reveal">Situações que costumam ser bem atendidas a distância</h3>
 
         <details class="tele__group reveal">
           <summary>Problemas de saúde súbitos</summary>
@@ -278,7 +279,7 @@
       <h2 class="contact__h reveal" id="contato-h">Vamos conversar sobre o seu cuidado</h2>
       <p class="contact__sub reveal">Atendimento em toda a Grande Vitória — ES.</p>
       <div class="contact__links reveal">
-        <a class="btn btn--primary" href="https://wa.me/5527997910392" target="_blank" rel="noopener">WhatsApp · (27) 99791-0392</a>
+        <a class="btn btn--primary" href="https://wa.me/5527997910392?text=Ol%C3%A1%2C%20Dra.%20Waleska!%20Gostaria%20de%20conversar%20sobre%20o%20meu%20cuidado." target="_blank" rel="noopener">WhatsApp · (27) 99791-0392</a>
         <a class="btn btn--ghost" href="mailto:waleskacsilva@gmail.com">waleskacsilva@gmail.com</a>
       </div>
     </section>
@@ -289,6 +290,7 @@
     <p class="foot__note">Grande Vitória – ES. Conteúdo informativo; não substitui consulta médica.</p>
   </footer>
 
-  <script src="js/main.js" defer></script>
+  <!-- se o main.js falhar (404/bloqueio), volta a no-js para os .reveal não ficarem invisíveis -->
+  <script src="js/main.js" defer onerror="document.documentElement.classList.replace('js','no-js')"></script>
 </body>
 </html>

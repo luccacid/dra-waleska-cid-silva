@@ -51,7 +51,6 @@
 * { box-sizing: border-box; }
 /* âncoras (#atendimento, #contato) não somem sob o header fixo */
 html { scroll-behavior: smooth; scroll-padding-top: 5.5rem; }
-:target { scroll-margin-top: 5.5rem; }
 ::selection { background: var(--azul-700); color: var(--paper); }
 
 body {
@@ -72,6 +71,8 @@ a { color: inherit; }
 
 /* quebra tipográfica: títulos equilibrados, parágrafos sem linhas órfãs */
 h2, .contact__h, .areas__lead { text-wrap: balance; }
+/* títulos display não herdam o 1.6 do body (mesmo registro do .pledge__q) */
+.approach__h, .tele__h, .areas__h, .contact__h { line-height: 1.18; }
 p { text-wrap: pretty; }
 
 /* ============ Acessibilidade ============ */
@@ -232,8 +233,8 @@ p { text-wrap: pretty; }
 .tele__group summary::-webkit-details-marker { display: none; }
 /* traço-assinatura brasa, mesmo idioma do .mode__t — centrado na linha do título */
 .tele__group summary::before { content: ""; position: absolute; left: 0; top: 50%; margin-top: -1px; width: 0.8rem; height: 2px; background: var(--brasa); }
-.tele__group summary::after { content: "+"; position: absolute; right: 0.3rem; top: 50%; transform: translateY(-50%); font-family: var(--sans); font-weight: 500; color: var(--azul-500); }
-.tele__group[open] summary::after { content: "−"; }
+.tele__group summary::after { content: "+" / ""; position: absolute; right: 0.3rem; top: 50%; transform: translateY(-50%); font-family: var(--sans); font-weight: 500; color: var(--azul-500); }
+.tele__group[open] summary::after { content: "−" / ""; }
 .tele__group .areas__list { margin: 0 0 1.4rem; }
 .tele__also { margin: 2rem 0 0; color: color-mix(in srgb, var(--ink) 78%, var(--paper)); max-width: 52ch; }
 
@@ -339,6 +340,12 @@ p { text-wrap: pretty; }
 @media (max-width: 899.98px) {
   .hero { padding-bottom: 0; }
   .ecg--hero { bottom: clamp(1rem, 4vw, 2rem); }
+}
+
+/* telas estreitas: as 3 linhas fixas do h1 quebram mal ("muito" órfão) — quebra natural */
+@media (max-width: 599.98px) {
+  .hero__thesis { text-wrap: balance; }
+  .hero__thesis .line { display: inline; }
 }
 
 @media (min-width: 720px) {
