@@ -6,6 +6,7 @@ DRA. WALESKA CID SILVA.txt
 alterações/
 AGENTS.md
 .omc/
+.agtx/
 
 # test artifacts (rendered during the audit/test phase)
 .claude/evals/shot-*.png
