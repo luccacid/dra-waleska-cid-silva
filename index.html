@@ -32,7 +32,6 @@
   <link rel="preload" href="fonts/hanken-grotesk-var.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="css/styles.css" />
 
-  <!-- FALTANDO (CFM): número de RQE do especialista — confirmar com a cliente antes de publicar; UF do CRM = ES (confirmado) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -43,8 +42,18 @@
     "description": "Médica de Família e Comunidade com mais de 25 anos de experiência. Atendimento humanizado em consultório, teleconsulta e visitas domiciliares na Grande Vitória.",
     "telephone": "+55-27-99791-0392",
     "email": "waleskacsilva@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rua Constante Sodré, 505",
+      "addressLocality": "Vitória",
+      "addressRegion": "ES",
+      "addressNeighborhood": "Santa Lúcia"
+    },
     "areaServed": { "@type": "AdministrativeArea", "name": "Grande Vitória, ES" },
-    "identifier": { "@type": "PropertyValue", "propertyID": "CRM", "value": "CRM-ES 6410" },
+    "identifier": [
+      { "@type": "PropertyValue", "propertyID": "CRM", "value": "CRM-ES 6410" },
+      { "@type": "PropertyValue", "propertyID": "RQE", "value": "9484" }
+    ],
     "availableService": [
       { "@type": "MedicalProcedure", "name": "Consulta em consultório" },
       { "@type": "MedicalProcedure", "name": "Teleconsulta" },
@@ -72,8 +81,7 @@
 
     <!-- HERO: a tese, não headline+número+gradiente -->
     <section class="hero" aria-labelledby="tese">
-      <!-- FALTANDO (CFM): número de RQE do especialista — adicionar como "· RQE 0000" quando a cliente confirmar; UF do CRM = ES (confirmado) -->
-      <p class="hero__eyebrow reveal">Dra. Waleska Cid Silva · <span class="mono">CRM-ES 6410</span></p>
+      <p class="hero__eyebrow reveal">Dra. Waleska Cid Silva · <span class="mono">CRM-ES 6410</span> · <span class="mono">RQE 9484</span></p>
       <h1 class="hero__thesis" id="tese">
         <span class="line reveal">A saúde vai muito</span>
         <span class="line reveal">além do tratamento</span>
@@ -122,16 +130,29 @@
       <ul class="modes__list">
         <li class="mode reveal">
           <h3 class="mode__t">Consultório</h3>
-          <p class="mode__d">Consulta presencial, com tempo e escuta para entender o quadro completo.</p>
+          <p class="mode__d">
+            Consulta presencial, com tempo e escuta para entender o quadro completo.<br><br>
+            <strong>Local:</strong> Clínica CMOE (Rua Constante Sodré 505 - Santa Lúcia)<br>
+            <strong>Telefone:</strong> (27) 3227-9279<br>
+            <strong>WhatsApp:</strong> <a href="https://wa.me/5527998367882" target="_blank" rel="noopener">(27) 99836-7882</a><br>
+            <strong>Convênios:</strong> PASA, VALE, Saúde Caixa, Postal, Bradesco, Sul América, Unimed
+          </p>
         </li>
         <li class="mode reveal">
           <h3 class="mode__t">Teleconsulta</h3>
-          <p class="mode__d">Acompanhamento à distância, com a mesma atenção e segurança.
-            <a class="mode__link" href="#teleconsulta">Mais sobre a teleconsulta</a></p>
+          <p class="mode__d">
+            Acompanhamento à distância, com a mesma atenção e segurança.<br><br>
+            <strong>Telefone e WhatsApp:</strong> <a href="https://wa.me/5527997910392" target="_blank" rel="noopener">(27) 99791-0392</a><br>
+            <strong>Convênio:</strong> Unimed<br><br>
+            <a class="mode__link" href="#teleconsulta">Mais sobre a teleconsulta</a>
+          </p>
         </li>
         <li class="mode reveal">
           <h3 class="mode__t">Visita domiciliar</h3>
-          <p class="mode__d">Atendimento na sua casa, em toda a Grande Vitória.</p>
+          <p class="mode__d">
+            Atendimento na sua casa, em toda a Grande Vitória.<br><br>
+            <strong>Atendimento exclusivamente particular.</strong>
+          </p>
         </li>
       </ul>
     </section>
@@ -252,8 +273,8 @@
           <p class="reveal">
             Médica formada pela Universidade Federal do Espírito Santo (UFES) e especialista
             em Medicina de Família e Comunidade, com mais de 25 anos de experiência no
-            cuidado em consultórios e no domicílio — mais de 5000 visitas realizadas ao
-            longo de sua carreira.
+            cuidado em consultórios e no domicílio — mais de 5000 atendimentos domiciliares
+            realizados ao longo de sua carreira.
           </p>
           <p class="reveal">
             Idealizadora e criadora do curso
@@ -274,19 +295,19 @@
     </section>
 
     <!-- CONTATO -->
-    <!-- FALTANDO: endereço do consultório e horários de atendimento — adicionar aqui e no JSON-LD (PostalAddress/openingHours) quando a cliente fornecer; ver BRIEF.md pendências 3 -->
     <section class="contact" id="contato" aria-labelledby="contato-h">
       <h2 class="contact__h reveal" id="contato-h">Vamos conversar sobre o seu cuidado</h2>
       <p class="contact__sub reveal">Atendimento em toda a Grande Vitória — ES.</p>
       <div class="contact__links reveal">
-        <a class="btn btn--primary" href="https://wa.me/5527997910392?text=Ol%C3%A1%2C%20Dra.%20Waleska!%20Gostaria%20de%20conversar%20sobre%20o%20meu%20cuidado." target="_blank" rel="noopener">WhatsApp · (27) 99791-0392</a>
+        <a class="btn btn--primary" href="https://wa.me/5527997910392?text=Ol%C3%A1%2C%20Dra.%20Waleska!%20Gostaria%20de%20conversar%20sobre%20o%20meu%20cuidado." target="_blank" rel="noopener">Teleconsulta / Domicílio · (27) 99791-0392</a>
+        <a class="btn btn--primary" href="https://wa.me/5527998367882?text=Ol%C3%A1%2C%20Dra.%20Waleska!%20Gostaria%20de%20conversar%20sobre%20o%20meu%20cuidado." target="_blank" rel="noopener">Consultório · (27) 99836-7882</a>
         <a class="btn btn--ghost" href="mailto:waleskacsilva@gmail.com">waleskacsilva@gmail.com</a>
       </div>
     </section>
   </main>
 
   <footer class="foot">
-    <p class="foot__id">Dra. Waleska Cid Silva · <span class="mono">CRM-ES 6410</span> · Médica de Família e Comunidade</p>
+    <p class="foot__id">Dra. Waleska Cid Silva · <span class="mono">CRM-ES 6410</span> · <span class="mono">RQE 9484</span> · Médica de Família e Comunidade</p>
     <p class="foot__note">Grande Vitória – ES. Conteúdo informativo; não substitui consulta médica.</p>
   </footer>
 
